@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2C3D4-5E6F-4708-9A0B-1C2D3E4F5A6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FoodDeliverySystem</RootNamespace>
+    <AssemblyName>FoodDeliverySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Database\SqlDbDataAccess.cs" />
+    <Compile Include="Common\Session.cs" />
+    <Compile Include="Common\UiTheme.cs" />
+    <Compile Include="Common\Validator.cs" />
+    <Compile Include="Model\CartItem.cs" />
+    <Compile Include="Model\Carts.cs" />
+    <Compile Include="Model\Categories.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Food.cs" />
+    <Compile Include="Model\Foods.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderDetail.cs" />
+    <Compile Include="Model\OrderDetails.cs" />
+    <Compile Include="Model\Orders.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Payments.cs" />
+    <Compile Include="Model\Restaurant.cs" />
+    <Compile Include="Model\Restaurants.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Controller\CartController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\EmployeeController.cs" />
+    <Compile Include="Controller\FoodController.cs" />
+    <Compile Include="Controller\LogInController.cs" />
+    <Compile Include="Controller\OrderController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
+    <Compile Include="Controller\ReportController.cs" />
+    <Compile Include="Controller\RestaurantController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="View\AdminCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminCategories.Designer.cs">
+      <DependentUpon>AdminCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminEmployees.Designer.cs">
+      <DependentUpon>AdminEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminOrders.Designer.cs">
+      <DependentUpon>AdminOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminRestaurants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminRestaurants.Designer.cs">
+      <DependentUpon>AdminRestaurants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminUsers.Designer.cs">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfirmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfirmOrder.Designer.cs">
+      <DependentUpon>ConfirmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CustomerDashBoard.Designer.cs">
+      <DependentUpon>CustomerDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployeeDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeeDashBoard.Designer.cs">
+      <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FoodAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FoodAdminForm.Designer.cs">
+      <DependentUpon>FoodAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FoodCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FoodCustomerForm.Designer.cs">
+      <DependentUpon>FoodCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RestaurantDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RestaurantDashBoard.Designer.cs">
+      <DependentUpon>RestaurantDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdminDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdminDashBoard.Designer.cs">
+      <DependentUpon>SuperAdminDashBoard.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Database\RestaurantDB.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
