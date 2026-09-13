@@ -163,16 +163,6 @@ Users ──┬──< Restaurants ──┬──< Employees
 
 ---
 
-## Documentation
-
-| Document | Contents |
-|---|---|
-| [`Docs/MODIFICATION_PLAN.md`](Docs/MODIFICATION_PLAN.md) | Analysis of the original project, every change and why |
-| [`Docs/VIVA_GUIDE.md`](Docs/VIVA_GUIDE.md) | Expected questions with answers, per module |
-| [`Docs/GITHUB_GUIDE.md`](Docs/GITHUB_GUIDE.md) | Branches, commits, pull requests, merge conflicts |
-| [`Docs/TEAM_GUIDE.md`](Docs/TEAM_GUIDE.md) | Who owns which files |
-| [`Docs/TESTING_CHECKLIST.md`](Docs/TESTING_CHECKLIST.md) | Every case to test before the demo |
-| `Docs/Restaurant_Management_System_Report.pdf` | The project report |
 
 ---
 
